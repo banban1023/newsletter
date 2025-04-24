@@ -1,0 +1,41 @@
+.home .bg-pic {
+  width: 100%;
+}
+.home .content {
+  padding: 2.3125rem 1.5625rem 0;
+}
+.home .content header h1 {
+  font-size: 36px;
+}
+.home .content main {
+  margin-top: 1.25rem;
+}
+.home .content main article {
+  line-height: 26px;
+}
+.home .content main ul {
+  padding: 23px 0 0 39px;
+  list-style: none;
+}
+.home .content main ul li {
+  line-height: 30px;
+  position: relative;
+}
+.home .content main ul li::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 0.4em;
+  width: 22px;
+  height: 22px;
+  background-image: url('../assets/images/icon-list.svg');
+  background-repeat: no-repeat;
+}
+.home .content main h2 {
+  font-size: 13px;
+  margin-top: 40px;
+}
+.home .content main input {
+  width: 100%;
+  height: 56px;
+}
