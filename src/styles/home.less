@@ -35,6 +35,11 @@
       h2 {
         font-size: 13px;
         margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        span {
+          color: @Red;
+        }
       }
       input {
         margin-top: 10px;
@@ -59,4 +64,65 @@
       }
     }
   }
+}
+@media (min-width: 768px) {
+  .app {
+    background-color: @Blue-700;
+    height: 100vh;
+    .home {
+      border-radius: 35px;
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 930px;
+      height: 642px;
+      background-color: white;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        max-width: 440px;
+        height: 100%;
+        padding: 20px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+      .content {
+        padding: 0 0 0 50px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        header {
+          h1 {
+            font-szie: 55px;
+          }
+        }
+        main {
+          input {
+            padding-left: 16px;
+          }
+          button {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 0;
+            cursor: pointer;
+            &:hover {
+              background: linear-gradient(
+                to right ,
+                rgb(254,82,122),
+                @Red
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.error {
+  border: 1px solid @Red !important;
+  background-color: rgb(255,232,230);
+  color: @Red;
+  opacity: 1 !important;
 }

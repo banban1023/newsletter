@@ -1,15 +1,17 @@
 <template>
   <div class="success">
-    <!-- Success message start -->
-    <div class="content">
-      <img src="@/assets/images/icon-success.svg" alt="">
-      <h1>Thanks for subscribing!</h1>
-      <article>
-        A confirmation email has been sent to <b>ash@loremcompany.com</b>.
-        Please open it and click the button inside to confirm your subscription.
-      </article>
+    <div class="card">
+      <!-- Success message start -->
+      <div class="content">
+        <img src="@/assets/images/icon-success.svg" alt="">
+        <h1>Thanks for subscribing!</h1>
+        <article>
+          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+          Please open it and click the button inside to confirm your subscription.
+        </article>
+      </div>
+      <button @click="$router.push('./')">Dismiss message</button>
     </div>
-    <button>Dismiss message</button>
 
     <!-- Success message end -->
   </div>

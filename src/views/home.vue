@@ -13,9 +13,9 @@
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        <h2>Email address</h2>
-        <input type="text" placeholder="email@company.com">
-        <button>Subscribe to monthly newsletter</button>
+        <h2>Email address<span v-if="isShow">Valid email required</span></h2>
+        <input @keyup.enter="SubmitEmail" :class="{error: isError}" v-model="email" type="text" placeholder="email@company.com">
+        <button @click="SubmitEmail">Subscribe to monthly newsletter</button>
       </main>
     </div>
     <!-- Sign-up form end -->
@@ -24,7 +24,29 @@
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  data () {
+    return {
+      email: '',
+      isShow: false,
+      isError: false
+    }
+  },
+  methods: {
+    valiFn () {
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.email)) {
+        this.isShow = true
+        this.isError = true
+      } else {
+        this.$router.push('/success')
+        this.email = ''
+      }
+    },
+    SubmitEmail () {
+      this.valiFn()
+      console.log(111)
+    }
+  }
 }
 </script>
 
