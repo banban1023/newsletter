@@ -38,7 +38,10 @@ export default {
         this.isShow = true
         this.isError = true
       } else {
-        this.$router.push('/success')
+        this.$router.push({
+          path: '/success',
+          query: { emailId: this.email }
+        })
         this.email = ''
       }
     },

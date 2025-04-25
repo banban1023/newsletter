@@ -6,7 +6,7 @@
         <img src="@/assets/images/icon-success.svg" alt="">
         <h1>Thanks for subscribing!</h1>
         <article>
-          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+          A confirmation email has been sent to <b>{{emailId}}</b>.
           Please open it and click the button inside to confirm your subscription.
         </article>
       </div>
@@ -19,7 +19,12 @@
 
 <script>
 export default {
-  name: 'SuccessPage'
+  name: 'SuccessPage',
+  computed: {
+    emailId () {
+      return this.$route.query.emailId
+    }
+  }
 }
 </script>
 
